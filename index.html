@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11100f">
+  <title>Shivam Sejwal — Portfolio Adventure</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="Shivam Sejwal home">Shivam’s<span>Portfolio</span></a>
+      <nav aria-label="Portfolio sections">
+        <a href="#about" data-jump="about">About</a><a href="#projects" data-jump="projects">Projects</a><a href="#experience" data-jump="experience">Experience</a><a href="#skills" data-jump="skills">Skills</a><a href="#contact" data-jump="contact">Contact</a>
+      </nav>
+      <button id="help-button" class="help-button" type="button" aria-label="How to play">?</button>
+    </header>
+
+    <section class="intro" id="home">
+      <div>
+        <p class="eyebrow">A PORTFOLIO YOU CAN PLAY</p>
+        <h1>Hey, I’m <span>Shivam</span><br>Welcome to my world.</h1>
+        <p class="intro-copy">Computer Science graduate with experience building and improving software, APIs, and data systems. Explore my work, skills, and journey.</p>
+      </div>
+      <div class="intro-badge" aria-hidden="true"><span>✦</span><small>PLAYER<br>ONE</small></div>
+    </section>
+
+    <div class="play-layout">
+    <section class="game-frame" aria-label="Interactive portfolio game">
+      <div class="game-hud"><span>WORLD 01 <b>·</b> MY JOURNEY</span><div class="hud-actions"><span>✦ <b id="star-count">0</b></span><span class="critters-count">CRITTERS <b id="critters-defeated">0</b>/4</span><button id="summary-button" class="hud-button" type="button">RESUME SUMMARY ↗</button></div></div>
+      <div class="viewport" id="viewport" tabindex="0" aria-label="Game area. Use arrow keys or A and D to move; Space or Up to jump.">
+        <div class="world" id="world">
+          <div class="sun"></div><div class="cloud cloud-one"></div><div class="cloud cloud-two"></div>
+          <div class="hill hill-back"></div><div class="hill hill-front"></div>
+          <div class="platform platform-one" data-platform="one" aria-label="Jump onto this platform"></div><div class="platform platform-two" data-platform="two" aria-label="Jump onto this platform"></div>
+          <div class="ground"></div>
+          <div class="sign sign-about" data-card="about"><span>ABOUT</span><i>↓</i></div>
+          <div class="sign sign-experience" data-card="experience"><span>EXPERIENCE</span><i>↓</i></div>
+          <div class="sign sign-projects" data-card="projects"><span>PROJECTS</span><i>↓</i></div>
+          <div class="sign sign-skills" data-card="skills"><span>SKILLS</span><i>↓</i></div>
+          <div class="sign sign-contact" data-card="contact"><span>CONTACT</span><i>↓</i></div>
+          <div class="enemy" data-enemy="one" role="img" aria-label="Roaming glitch critter. Jump on it to defeat it."><span></span></div>
+          <div class="enemy" data-enemy="two" role="img" aria-label="Roaming glitch critter. Jump on it to defeat it."><span></span></div>
+          <div class="enemy" data-enemy="three" role="img" aria-label="Roaming glitch critter. Jump on it to defeat it."><span></span></div>
+          <div class="enemy" data-enemy="four" role="img" aria-label="Roaming glitch critter. Jump on it to defeat it."><span></span></div>
+          <div class="quip-note quirk-todo"><b>TODO:</b> sleep <span>✎</span></div>
+          <div class="quip-note quirk-works">“works on my machine”</div>
+          <div class="quirk-coffee" aria-label="A little debug fuel"><span>☕</span><small>DEBUG FUEL</small></div>
+          <div class="quirk-plant" aria-hidden="true"><span>✿</span><i></i><b></b></div>
+          <div class="quirk-floating" aria-hidden="true">404<span>BUGS FOUND</span></div>
+          <div class="star star-one" aria-label="A skill star">✦</div><div class="star star-two" aria-label="A skill star">✦</div><div class="star star-three" aria-label="A skill star">✦</div>
+          <div class="player" id="player" role="img" aria-label="Tall pixel character with brown skin, dark hair, and an orange outfit"><span class="player-face"></span><span class="player-hair"></span></div>
+        </div>
+      </div>
+      <div class="game-message" id="game-message" aria-live="polite"></div>
+      <div class="game-controls"><span><kbd>←</kbd><kbd>→</kbd> or <kbd>A</kbd><kbd>D</kbd> move</span><span><kbd>↑</kbd> or <kbd>SPACE</kbd> jump</span><span>Stomp critters · Jump onto platforms · Find the little surprises</span></div>
+      <div class="touch-controls" aria-label="Touch controls"><button id="left-button" aria-label="Move left">←</button><button id="jump-button" aria-label="Jump">↑</button><button id="right-button" aria-label="Move right">→</button></div>
+      <div class="level-map" aria-label="Level map and section shortcuts"><div class="map-heading"><span>LEVEL MAP</span><span id="map-location">START · YOUR JOURNEY</span></div><div class="map-track"><div class="map-rail"></div><button class="map-stop active" type="button" data-jump="start"><span>01</span><b>START</b></button><button class="map-stop" type="button" data-jump="about"><span>02</span><b>ABOUT</b></button><button class="map-stop" type="button" data-jump="experience"><span>03</span><b>EXPERIENCE</b></button><button class="map-stop" type="button" data-jump="projects"><span>04</span><b>PROJECTS</b></button><button class="map-stop" type="button" data-jump="skills"><span>05</span><b>SKILLS</b></button><button class="map-stop" type="button" data-jump="contact"><span>06</span><b>CONTACT</b></button></div></div>
+    </section>
+
+    <section class="info-card" id="info-card" aria-live="polite" aria-labelledby="card-title">
+      <div class="card-icon" id="card-icon">✦</div>
+      <div class="card-content"><p class="eyebrow" id="card-kicker">YOUR NEXT STOP</p><h2 id="card-title">Pick a sign and start exploring</h2><p id="card-text">Move through the world and click a sign to learn more. This is your space to show what you’ve made and what you’re proud of.</p><ul id="card-bullets" class="card-bullets" hidden></ul><div id="card-links" class="card-links" hidden></div></div>
+      <span class="panel-tag">LIVE PORTFOLIO</span>
+    </section>
+    </div>
+
+  </main>
+  <dialog id="help-dialog"><button id="close-help" class="close-card" type="button" aria-label="Close help">×</button><p class="eyebrow">HOW TO PLAY</p><h2>Take a little walk.</h2><p>Use the arrow keys or A and D to move. Press Up or Space to jump. Land on a critter from above to defeat it, and use the floating platforms to reach higher spots. Portfolio details open automatically as you reach each checkpoint, or jump ahead with the level map. On a phone, use the on-screen buttons.</p><button id="got-it" class="primary-button" type="button">Got it</button></dialog>
+  <dialog id="summary-dialog" class="summary-dialog"><button id="close-summary" class="close-card" type="button" aria-label="Close résumé summary">×</button><p class="eyebrow">QUICK RÉSUMÉ</p><h2>Shivam Sejwal</h2><p class="summary-intro">Computer Science Graduate · Back in Delhi · Open to roles across India</p><div class="summary-grid">
+<section><h3>PROFILE</h3><p>Born and brought up in Delhi; spent 18 years here before moving to Brisbane for education. Now 22 and back in Delhi after four years in Australia, where I completed a BSc in Computer Science at QUT while working part-time as a bartender throughout. I am looking for opportunities throughout India, preferably Bengaluru, Mumbai, Hyderabad, then Delhi. Professional experience building Python/Django REST APIs, integrating OpenAI and NVIDIA Nemotron LLM APIs, and improving API latency by 35%.</p></section>
+<section><h3>EXPERIENCE</h3><p><strong>Software Developer · OreFOX AI</strong><br>Feb 2025 – Nov 2025<br>Architected Django REST APIs and scalable data models; reduced endpoint latency by 35%. Integrated OAuth 2.0 and Google Calendar APIs with secure token management and error recovery, supporting 99.2% uptime across 50,000+ monthly API calls. Led 5+ feature releases and resolved N+1 queries and memory leaks.</p></section>
+<section><h3>EDUCATION</h3><p><strong>Bachelor of Science, Computer Science</strong><br>Queensland University of Technology · Brisbane, Australia · Feb 2023 – Jul 2026<br><br><strong>High School Diploma, 10+2 (PCM Non-Med)</strong><br>St. Paul's School · Hauz Khas, Delhi · Jun 2017 – Jun 2021</p></section>
+<section><h3>SELECTED PROJECTS</h3><p><strong>Mood Tracking Application · Java</strong><br>Modular, object-oriented app for recording and tracking mood data.<br><br><strong>WebsiteIAB · HTML / CSS / Bootstrap</strong><br>Responsive event-management website with reusable interface components.<br><br><strong>Shared Memory IPC System · C</strong><br>POSIX shared-memory IPC with a custom dynamic double-vector and a dedicated test driver.</p></section>
+<section><h3>PROGRAMMING & FRAMEWORKS</h3><p>Python, Java, C#, C, C++, Go, JavaScript, PHP, SQL, HTML, CSS · Django, Django REST Framework, FastAPI, React, Node.js, Bootstrap</p></section>
+<section><h3>DATA, CLOUD & AI</h3><p>PostgreSQL, MongoDB, SQL / NoSQL · AWS, Azure, GCP, OCI · OpenAI API, NVIDIA Nemotron API, PyTorch, TensorFlow · REST APIs, OAuth 2.0, Google Calendar API</p></section>
+<section><h3>ENGINEERING & COLLABORATION</h3><p>Testing, behavior validation, API error handling, production debugging, defect investigation, root-cause analysis, data structures, algorithms, OOP, database design, query optimization, Git, GitHub, technical documentation, requirements analysis, teamwork, stakeholder communication.</p></section>
+<section><h3>LEADERSHIP & LANGUAGES</h3><p><strong>Head of Marketing · ThatBenzeneRing</strong><br>Student-run organization · Feb 2022 – Jun 2022<br>English · Hindi</p></section>
+</div><div class="summary-contact"><a href="mailto:Shivamsejwal123@gmail.com">Email</a><a href="tel:+918076041328">+91 8076041328</a><a href="https://linkedin.com/in/shivam-sejwal-ab0aa7207" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://github.com/ShivamSejwal" target="_blank" rel="noreferrer">GitHub ↗</a></div><button id="summary-explore" class="primary-button" type="button">Explore the level</button></dialog>
+  <script src="game.js"></script>
+</body>
+</html>
