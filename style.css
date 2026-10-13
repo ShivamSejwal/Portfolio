@@ -55,3 +55,36 @@ body{background:#100e0d;color:#fff4e8}
 .player-face{right:7px;top:-11px;width:3px;height:4px;background:#171310;z-index:2}
 .player-hair{position:absolute;z-index:3;top:-20px;left:1px;width:27px;height:10px;background:#21130e;border:2px solid #171310;border-radius:7px 8px 2px 2px;box-shadow:2px 3px 0 #21130e,-2px 4px 0 #21130e}
 .player-hair:after{content:"";position:absolute;left:-1px;bottom:-7px;width:7px;height:10px;background:#21130e;border-left:2px solid #171310}
+
+/* Longer Delhi-to-Brisbane-to-AI adventure */
+.world{width:3800px}
+.sun{right:250px}
+.cloud-three{left:1860px;top:74px;transform:scale(.9)}
+.cloud-four{left:2920px;top:52px;transform:scale(.72)}
+.hill-three{left:1910px;width:390px;height:150px;background:#3f2818}
+.hill-four{left:2850px;width:430px;height:190px;background:#54270e}
+.sign-education{left:1860px}
+.sign-australia{left:2240px}
+.sign-ai{left:2640px}
+.sign-contact{left:3100px}
+.sign-finish{left:3540px}
+.platform-three{left:1810px;bottom:143px;width:120px}
+.platform-four{left:2520px;bottom:135px;width:140px}
+.platform-five{left:3070px;bottom:130px;width:130px}
+.star-four{left:1570px;bottom:205px;animation-delay:.2s}
+.star-five{left:2010px;bottom:262px;animation-delay:.6s}
+.star-six{left:2470px;bottom:188px;animation-delay:1s}
+.star-seven{left:2850px;bottom:245px;animation-delay:.3s}
+.star-eight{left:3370px;bottom:220px;animation-delay:.7s}
+.quirk-delhi,.quirk-aus,.quirk-ai{position:absolute;z-index:2;padding:8px 11px;border:1px solid #a95213;border-radius:7px;background:#1c130d;color:#ffcf9c;font:10px 'DM Mono',monospace;box-shadow:3px 3px 0 #74330d;transform:rotate(-2deg);white-space:nowrap}
+.quirk-delhi{left:1840px;top:108px}.quirk-delhi span,.quirk-ai span{display:block;margin-top:4px;color:#ff9a37;font-size:8px;letter-spacing:.1em}
+.quirk-aus{left:2350px;top:122px;transform:rotate(2deg)}
+.quirk-ai{left:2690px;top:90px;transform:rotate(-3deg)}
+.quirk-pigeon{position:absolute;z-index:2;left:2180px;bottom:70px;display:flex;align-items:center;gap:5px;color:#ffbd7a;font-size:23px}
+.quirk-pigeon small{font:8px 'DM Mono',monospace;letter-spacing:.08em}
+.quirk-finish{position:absolute;left:3440px;top:112px;z-index:2;color:#ff861f;font:700 14px 'DM Mono',monospace;transform:rotate(-4deg);text-shadow:0 0 13px #ff861f55}
+.quirk-finish span{display:block;margin-top:5px;color:#cf9661;font-size:8px;letter-spacing:.1em}
+.level-map{overflow-x:auto;scrollbar-color:#8c4a1a #171310;scrollbar-width:thin}
+.map-track{min-width:900px}
+.map-stop{flex:1 0 9%;width:auto}
+@media(max-width:760px){.map-track{min-width:850px}.quirk-delhi,.quirk-aus,.quirk-ai{font-size:9px}.quirk-finish{top:92px}}
